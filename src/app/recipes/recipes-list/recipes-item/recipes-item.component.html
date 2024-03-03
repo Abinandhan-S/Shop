@@ -1,0 +1,25 @@
+<!-- <a  style="cursor: pointer;"
+        class="list-group-item clearfix" 
+        (click)="onClickRecipeItem()"> -->
+    
+    <a style="cursor: pointer;"
+        routerLinkActive="active"
+        class="list-group-item clearfix" 
+        [routerLink]="[index]">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">
+                    {{recipeProperty.name}}
+                </h4>
+                <p class="list-group-item-text">
+                    {{recipeProperty.description}}
+                </p>
+            </div>
+            <span class="pull-right">
+                <img 
+                    src="{{recipeProperty.imagePath}}"
+                    alt="{{recipeProperty.name}}"
+                    class="img-responsive" 
+                    style="max-height: 100px;">
+            </span>
+    </a>
+        
